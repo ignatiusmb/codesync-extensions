@@ -9,7 +9,7 @@ with open('extensions.json', 'r+') as f:
     for idx, e in enumerate(extensions):
         print()  # New line before header
         print(fill(f"*** Extension {str(idx).zfill(3)}: '{e}' <<", "-"))
-        if e in extensions:
+        if e in installed:
             success += 1
             print(">> Is already installed")
             continue
